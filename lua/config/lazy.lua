@@ -1,5 +1,5 @@
 local vim = vim
--- local lazypath = "/usr/share/nvim/" .. "/lazy/lazy.nvim"    -- vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -7,7 +7,7 @@ if not vim.loop.fs_stat(lazypath) then
         "clone",
         "--filter=blob:none",
         "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable", -- latest stable release
+        "--branch=stable",
         lazypath,
     })
 end
@@ -18,25 +18,19 @@ require("lazy").setup({
     { import = "plugins" },
   },
   defaults = {
-    lazy = true, -- should plugins be lazy-loaded?
-    version = false, -- always use the latest git commit
-    -- version = "*", -- try installing the latest stable version for plugins that support semver
+    lazy = false,                                           -- should plugins be lazy-loaded?
+    version = false,                                        -- always use the latest git commit
   },
-  lockfile = nil, -- vim.fn.stdpath("config") .. "/lazy-lock.json", -- lockfile generated after running update.
+  lockfile = vim.fn.stdpath("config") .. "/lazy-lock.json", -- lockfile generated after running update.
   git = {
     -- defaults for the `Lazy log` command
-    -- log = { "-10" }, -- show the last 10 commits
-    log = { "--since=3 days ago" }, -- show commits from the last 3 days
-    timeout = 120, -- kill processes that take more than 2 minutes
+    log = { "--since=3 days ago" },                         -- show commits from the last 3 days
+    timeout = 120,                                          -- kill processes that take more than 2 minutes
     url_format = "https://ghproxy.com/https://github.com/%s.git",
   },
-  dev = {
-    -- directory where you store your local plugin projects
-    path = "~/projects",
-    ---@type string[] plugins that match these patterns will use your local versions instead of being fetched from GitHub
-    patterns = {}, -- For example {"folke"}
-  },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+-- vim.cmd([[colorscheme catppuccin-mocha]])
+  install = { colorscheme = { "catppuccin-mocha" } },
+  --install = { colorscheme = { "catppuccin-mocha", "habamax" } },
   ui = {
     -- a number <1 is a percentage., >1 is a fixed size
     size = { width = 0.8, height = 0.8 },
@@ -76,7 +70,7 @@ require("lazy").setup({
   diff = {
     cmd = "git",
   },
-  checker = { enabled = true }, -- automatically check for plugin updates
+  checker = { enabled = true },                             -- automatically check for plugin updates
   change_detection = {
     -- automatically check for config file changes and reload the ui
     enabled = true,

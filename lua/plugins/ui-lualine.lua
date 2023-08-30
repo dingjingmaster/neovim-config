@@ -31,7 +31,7 @@ local config = {
     -- Disable sections and component separators
     component_separators = "",
     section_separators = "",
-    theme = "tokyonight", -- 需要安装tokyonight插件
+    theme = "catppuccin", -- 需要安装tokyonight插件
   },
   sections = {
     -- these are to remove the defaults

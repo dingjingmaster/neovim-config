@@ -11,6 +11,9 @@ return {
       'coc-marketplace',            -- 重要，用于安装其它coc语言支持插件
       'coc-json',                   -- json 
       'coc-clangd',                 -- C/C++
+      'coc-css',                    -- CSS
+      'coc-docker',                 -- docker
+      'coc-go',                     -- go
       'coc-cmake',                  -- cmake
       'coc-sql',                    -- sql
       'coc-rust-analyzer',          -- rust
@@ -21,7 +24,6 @@ return {
       'coc-xml',                    -- XML
       'coc-toml',                   -- toml
       'coc-translator',             -- 语言事务
-      'coc-git',                    -- git
       'coc-yank',                   -- yank
     }
     G.cmd("command! -nargs=? Fold :call CocAction('fold', <f-args>)")

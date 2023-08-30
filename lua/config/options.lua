@@ -6,13 +6,15 @@ local opt = vim.opt
 g.mapleader = " "
 g.maplocalleader = " "
 
-opt.encoding = "utf-8"
-opt.autowrite = true                        --  启用自动写入
+opt.encoding = "utf-8"                      -- 编码设置
+opt.helplang = cn                           -- 帮助文档语言
+opt.autowrite = true                        -- 启用自动写入
 opt.clipboard = "unnamedplus"               -- 与系统剪贴板同步
 opt.completeopt = "menu,menuone,noselect"
 opt.conceallevel = 3                        -- 隐藏*标记为粗体和斜体
 opt.confirm = true                          -- 退出修改后的缓冲区前确认保存更改
 opt.cursorline = true                       -- 启用当前行的高亮显示
+opt.cursorcolumn = true                     -- 启用当前列显示
 opt.expandtab = true                        -- 使用空格而不是制表符
 opt.formatoptions = "jcroqlnt"              -- tcqj
 opt.grepformat = "%f:%l:%c:%m"
@@ -51,6 +53,9 @@ opt.updatetime = 200                        -- 保存交换文件并触发 Curso
 opt.wildmode = "longest:full,full"          -- 命令行补全模式
 opt.winminwidth = 6                         -- 最小窗口宽度
 opt.wrap = false                            -- 禁用自动换行
+opt.autoread = true                         -- 启动检测外部更改
+opt.backspace = {"indent", "eol", "start"}  -- 设置退格删除
+opt.background = "dark"                     -- 使用黑色主题
 
 -- 折叠
 opt.foldenable = true
