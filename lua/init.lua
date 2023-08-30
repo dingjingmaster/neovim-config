@@ -7,6 +7,7 @@
    - plugins.lua       配置插件
 --]]
 require('config.lazy')
+require('config.ctags')
 require('config.neovide')
 require('config.autocmd')
 require('config.keymaps')
