@@ -18,16 +18,15 @@ g.gutentags_ctags_extra_args = {
     '--c++kinds=+pxIi',
 }
 
-local ctagsCache = '/home/dingjing/.cache/tags/'
+local homePath = vim.loop.os_homedir()
+local ctagsCache = homePath .. '/.cache/tags/'
 
 function log(msg)
     vim.notify(msg, "info")
 end
 
-function getProjectRootDir(path)
-    log(path)
-    
-end
+--log(ctagsCache)
+
 
 if nil == g.vim_tags then
     g.vim_tags = ctagsCache
