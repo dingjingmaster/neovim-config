@@ -8,8 +8,10 @@ return {
             let tagFile = '~/.cache/tags/ctag' . name . '.tags'
             let g:tags_command = 'ctags --sort=yes --extras=+fFgpqrs --c-kinds=+px --fields=+aCeEfFikKlmnNpPrRsStxzZ --if0=yes --output-format=e-ctags --tag-relative=never -R -o ~/.cache/tags/ctag' . name . '.tags'
             let g:gtags_command = g:tags_command
-            autocmd VimEnter * execute 'GenerateTags'
-            autocmd VimEnter * execute 'set tags=' . tagFile
+            augroup ctagsCmd
+                autocmd VimEnter * execute 'GenerateTags'
+                autocmd VimEnter * execute 'set tags=' . tagFile
+            augroup END
             autocmd BufWritePost * call system(g:tags_command)
         ]])
     end
