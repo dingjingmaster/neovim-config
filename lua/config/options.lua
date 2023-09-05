@@ -62,6 +62,8 @@ opt.foldenable = true
 opt.foldmethod = "indent"                   -- indent 按段落 | manual 手动
 opt.foldlevelstart = 999
 
+-- tags
+
 --光标回到上次编辑位置
 G.cmd([[ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif ]])
 
