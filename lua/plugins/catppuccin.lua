@@ -33,7 +33,8 @@ return {
             which_key = true,
         },
     },
-    config = function ()
-        vim.cmd([[colorscheme catppuccin-mocha]])
-    end
+    --
+    --config = function ()
+    --    vim.cmd([[colorscheme catppuccin-mocha]])
+    --end
 }

@@ -29,7 +29,7 @@ require("lazy").setup({
     url_format = "https://ghproxy.com/https://github.com/%s.git",
   },
 -- vim.cmd([[colorscheme catppuccin-mocha]])
-  install = { colorscheme = { "catppuccin-mocha" } },
+  --install = { colorscheme = { "catppuccin-mocha" } },
   --install = { colorscheme = { "catppuccin-mocha", "habamax" } },
   ui = {
     -- a number <1 is a percentage., >1 is a fixed size
