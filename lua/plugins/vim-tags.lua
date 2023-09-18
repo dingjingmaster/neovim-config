@@ -12,7 +12,8 @@ return {
                 autocmd VimEnter * execute 'GenerateTags'
                 autocmd VimEnter * execute 'set tags=' . tagFile
             augroup END
-            autocmd BufWritePost * call system(g:tags_command)
+            " autocmd BufWritePost * call system(g:tags_command)
+            autocmd BufWritePost * execute 'GenerateTags'
         ]])
     end
 }
