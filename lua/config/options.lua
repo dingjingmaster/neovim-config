@@ -6,6 +6,7 @@ local opt = vim.opt
 g.mapleader = " "
 g.maplocalleader = " "
 
+opt.expandtab = true                        -- 空格替换 tab
 opt.encoding = "utf-8"                      -- 编码设置
 opt.helplang = cn                           -- 帮助文档语言
 opt.autowrite = true                        -- 启用自动写入
@@ -45,6 +46,8 @@ opt.spelllang = { "en" }                    -- 拼写
 opt.splitbelow = true                       -- 将新窗口置于当前窗口之下
 opt.splitright = true                       -- 将新窗口置于当前窗口右边
 opt.tabstop = 4                             -- tab键相当与空格数量
+opt.shiftwidth = 4                          -- 自动缩进4
+opt.softtabstop = 4                         -- 自动缩进4
 opt.termguicolors = true                    -- 真彩色支持
 opt.timeoutlen = 300
 opt.undofile = true
@@ -61,6 +64,8 @@ opt.background = "dark"                     -- 使用黑色主题
 opt.foldenable = true
 opt.foldmethod = "indent"                   -- indent 按段落 | manual 手动
 opt.foldlevelstart = 999
+
+g.go_version_warning = false                -- 去掉版本信息
 
 -- tags
 
