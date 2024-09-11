@@ -30,7 +30,6 @@ return {
             semantic_tokens = true,
             telescope = true,
             treesitter = true,
-            which_key = true,
         },
     },
     --

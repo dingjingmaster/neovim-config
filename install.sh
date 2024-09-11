@@ -8,6 +8,7 @@ NVIM_BACKUP_DIR="$NVIM_DIR/backup"
 
 [[ -d $NVIM_BACKUP_DIR ]] && rm -rf $NVIM_BACKUP_DIR
 [[ ! -d $NVIM_BACKUP_DIR ]] && mkdir -p $NVIM_BACKUP_DIR
+[[ -f /etc/profile.d/neovim.sh ]] && sudo rm -f /etc/profile.d/neovim.sh
 [[ ! -f /etc/profile.d/neovim.sh ]] && sudo cp -f $CUR_DIR/profile.d/neovim.sh /etc/profile.d/
 
 [[ -d $NVIM_DIR/lua ]] && mv $NVIM_DIR/lua $NVIM_BACKUP_DIR/

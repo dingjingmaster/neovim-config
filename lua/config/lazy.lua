@@ -18,7 +18,7 @@ require("lazy").setup({
     { import = "plugins" },
   },
   defaults = {
-    lazy = false,                                           -- should plugins be lazy-loaded?
+    lazy = true,                                            -- should plugins be lazy-loaded?
     version = false,                                        -- always use the latest git commit
   },
   lockfile = vim.fn.stdpath("config") .. "/lazy-lock.json", -- lockfile generated after running update.
@@ -26,7 +26,7 @@ require("lazy").setup({
     -- defaults for the `Lazy log` command
     log = { "--since=3 days ago" },                         -- show commits from the last 3 days
     timeout = 120,                                          -- kill processes that take more than 2 minutes
-    url_format = "https://ghproxy.com/https://github.com/%s.git",
+    url_format = "https://github.com/%s.git",
   },
 -- vim.cmd([[colorscheme catppuccin-mocha]])
   --install = { colorscheme = { "catppuccin-mocha" } },
@@ -108,10 +108,10 @@ require("lazy").setup({
     },
   },
   readme = {
-    root = vim.fn.stdpath("state") .. "/lazy/readme",
-    files = { "README.md", "lua/**/README.md" },
+    --root = vim.fn.stdpath("state") .. "/lazy/readme",
+    --files = { "README.md", "lua/**/README.md" },
     -- only generate markdown helptags for plugins that dont have docs
-    skip_if_doc_exists = true,
+    --skip_if_doc_exists = true,
   },
 })
 

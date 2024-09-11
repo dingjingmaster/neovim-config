@@ -1,7 +1,7 @@
 local vim = vim
 
 if vim.g.neovide then
-    vim.opt.guifont = { "Source Code Pro ", "h10" }
+    vim.opt.guifont = { "JetBrains Mono SemiBold", "h10" }
     -- 模糊半径
     vim.g.neovide_floating_blur_amount_x = 2.0
     vim.g.neovide_floating_blur_amount_y = 2.0
@@ -15,11 +15,11 @@ if vim.g.neovide then
 
     -- === 功能性 ===
     -- 刷新率
-    vim.g.neovide_refresh_rate = 60
+    vim.g.neovide_refresh_rate = 90
     -- 空闲刷新率
-    vim.g.neovide_refresh_idle = 5
+    vim.g.neovide_refresh_idle = 60
     -- 没有空闲
-    vim.g.neovide_no_idle = true
+    vim.g.neovide_no_idle = false
     -- 确认退出
     vim.g.neovide_confirm_quit = false
 
@@ -28,7 +28,7 @@ if vim.g.neovide then
     -- 记住以前的窗体大小
     vim.g.neovide_remember_window_size = false
     -- 启动分析器
-    vim.g.neovide_profile = true
+    vim.g.neovide_profile = false
 
     -- === 输入设置
     -- 使用super键
