@@ -24,6 +24,9 @@ return {
             'coc-toml',                   -- toml
             'coc-translator',             -- 语言事务
             'coc-yank',                   -- yank
+            'coc-syntax',
+            'coc-vimlsp',
+            'coc-tsserver',
         }
 --    G.cmd("command! -nargs=? Fold :call CocAction('fold', <f-args>)")
 ---    G.cmd("hi! link CocPum Pmenu")
