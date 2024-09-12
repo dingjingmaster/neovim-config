@@ -6,6 +6,7 @@ CUR_DIR=$(dirname $(realpath -- $0))
 NVIM_DIR="/home/$(whoami)/.config/nvim"
 NVIM_BACKUP_DIR="$NVIM_DIR/backup"
 
+[[ ! -d $NVIM_DIR ]] && mkdir -p ${NVIM_DIR}
 [[ -d $NVIM_BACKUP_DIR ]] && rm -rf $NVIM_BACKUP_DIR
 [[ ! -d $NVIM_BACKUP_DIR ]] && mkdir -p $NVIM_BACKUP_DIR
 [[ -f /etc/profile.d/neovim.sh ]] && sudo rm -f /etc/profile.d/neovim.sh
@@ -16,6 +17,7 @@ NVIM_BACKUP_DIR="$NVIM_DIR/backup"
 [[ -d $NVIM_DIR/syntax ]] && mv $NVIM_DIR/syntax $NVIM_BACKUP_DIR/
 [[ -f $NVIM_DIR/init.lua ]] && mv $NVIM_DIR/init.lua $NVIM_BACKUP_DIR/
 
-cp -r $CUR_DIR/lua                 $NVIM_DIR
-mv $NVIM_DIR/lua/init.lua      	   $NVIM_DIR/init.lua
+cp -r $CUR_DIR/lua                      $NVIM_DIR
+mv $NVIM_DIR/lua/init.lua               $NVIM_DIR/init.lua
+cp ${CUR_DIR}/config/coc-settings.json  $NVIM_DIR
 

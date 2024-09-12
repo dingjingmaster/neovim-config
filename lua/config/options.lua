@@ -1,5 +1,4 @@
 -- Add any additional options here
-local G = require('G')
 local g = vim.g
 local opt = vim.opt
 
@@ -70,7 +69,7 @@ g.go_version_warning = false                -- 去掉版本信息
 -- tags
 
 --光标回到上次编辑位置
-G.cmd([[ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif ]])
+vim.cmd([[ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif ]])
 
 if vim.fn.has("nvim-0.9.0") == 1 then
   opt.splitkeep = "screen"
