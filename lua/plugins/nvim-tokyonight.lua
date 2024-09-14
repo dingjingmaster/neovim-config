@@ -6,7 +6,7 @@ return {
         style = "night",
         sidebars = { "qf", "vista_kind", "terminal", "packer" },
     },
-    config = function ()
-        vim.cmd([[colorscheme tokyonight-night]])
-    end
+    --config = function ()
+    --    vim.cmd([[colorscheme tokyonight-night]])
+    --end
 }
